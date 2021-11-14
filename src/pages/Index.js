@@ -22,13 +22,16 @@ const Index = (props) =>{
 
     const loaded = () =>{
         return props.bookmark.map((bookmark)=>{
-            return <div key={bookmark._id}>
+            return <div className="links" key={bookmark._id}>
                 <Link to={`bookmark/${bookmark._id}`}>
                     <h1>{bookmark.title}</h1>
                 </Link>
-                <Link to={`${bookmark.url}`}>
-                    <h3>{bookmark.url}</h3>
+                <div className="buttons">
+                <Link to={`bookmark/${bookmark._id}`}>
+                <button>Edit</button>
                 </Link>
+                <a href={bookmark.url}><button>Visit</button></a>
+                </div>
             </div>
         })
     }
@@ -38,12 +41,15 @@ const Index = (props) =>{
     }
      
     return <section>
-    <form onSubmit={handleSubmit}>
-        <input type="text" name="title" value={editForm.title} placeholder="title" onChange={handleChange}/>
-        <input type="text" name="url" value={editForm.url} placeholder="url" onChange={handleChange}/>
-        <input type="submit" value="Create New Bookmark"/>
+    <form className="create" onSubmit={handleSubmit}>
+        <h1>Create a Bookmark!</h1>
+        <input type="text" name="title" value={editForm.title} placeholder="Title" onChange={handleChange}/>
+        <input type="text" name="url" value={editForm.url} placeholder="https://" onChange={handleChange}/>
+        <input className="createButton" type="submit" value="Create New Bookmark"/>
     </form>
+    <div className="bookmarks">
     {props.bookmark ? loaded() : loading()}
+    </div>
     </section>
 }
 
