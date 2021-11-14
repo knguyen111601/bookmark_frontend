@@ -52,7 +52,7 @@ const Show = (props) => {
     }
 
     const form = (
-        <form onSubmit={handleSubmit}>
+        <form className="editForm" onSubmit={handleSubmit}>
           <input
             type="text"
             value={editForm.title}
@@ -73,10 +73,12 @@ const Show = (props) => {
 
     return (
       <div className="bookmark">
+        <div className="showCard">
         <h1>{specificBookmark.title}</h1>
-        <h2>{specificBookmark.url}</h2>
+        <h2>URL : <a href={specificBookmark.url}>{specificBookmark.url}</a></h2>
+        </div>
         {form}
-        <button onClick={removeBookmark}>DELETE Bookmark</button>
+        <button className="deleteButton" onClick={removeBookmark}>Delete Bookmark</button>
       </div>
     );
   } else {
