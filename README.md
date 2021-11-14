@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Project 3
+## Bookmaark'd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By Kenny Nguyen, Tony Daniels and Ahmed Sorour
 
-## Available Scripts
+## Project Summary
 
-In the project directory, you can run:
+We’re building a bookmark app using JavaScript, mongoDB, express and node. The app is to bring the user to where they can bookmark a site that they want to keep in case they want to go to it again in the future. It allows the user to save a web site's URL address for future reference.
 
-### `npm start`
+## Models
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The Model will consist of a schema that will have 2 properties from the backend. The front end will have to respect this schema in order to work.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- title: String
+- url: String
 
-### `npm test`
+## Route Table
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The root table was made off of full CRUD that was JavaScript.
 
-### `npm run build`
+| url                 | method | action                                 |        |
+|---------------------|--------|----------------------------------------|--------|
+| /bookmark           | get    | The main/ index page                   | index  |
+| /bookmark/:id       | get    | get a particular bookmark item         | show   |
+| /bookmark/          | post   | post the new item                      | create |
+| /bookmark/:id/      | put    | update the bookmark from the list      | update |
+| /bookmark/:id       | delete | delete a bookmark                      | delete |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User should be able to put type what they want on this app so that they don’t have to worry about forgetting after. If they have the site and url, they can either delete the item or update it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Challenges
 
-### `npm run eject`
+- not being able to npm run start at one point after main.js was created. So, I pushed it to Github and made an “attempt branch”. If anything messed up, we were to just load the last working branch. At least that was the idea.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- At times, the filename fonts were red. While the code was still working, the team spent about 15 minutes on what the issue was. Then the red suddenly went away.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## List of Technologies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- node.js
+- HTML
+- CSS
+- react
+- EXPRESS
+- mongo
+- morgan
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

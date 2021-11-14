@@ -5,9 +5,178 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  height: 110px;
+  margin: auto;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.links a{
+  color: black;
+  text-decoration: none;
+  width: 50%;
+}
+
+.links button {
+  width: 50%;
+  height: 30px;
+  background-color: tomato;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.buttons {
+  width: 20%;
+}
+
+.create {
+  background-color: tomato;
+  border-radius: 0 0 30px 30px;
+  margin-top: -50px;
+}
+
+.create input {
+  padding: 20px;
+  margin: 10px;
+  margin-top: 0px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create h1 {
+  color: white;
+  font-size: 1em;
+}
+
+.createButton {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.nav {
+  background-color: tomato;
+  border-radius: 0 0 30px 30px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 4em;
+}
+
+.bookmarks {
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  height: 150vh;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+
+.editForm {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.editForm input {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.bookmark {
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  height: 100vh;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+
+.bookmark h2 a {
+  text-decoration: none;
+  color: tomato;
+}
+
+.bookmark h1 {
+  margin-bottom: -10px;
+}
+
+.deleteButton {
+  padding: 10px;
+  margin-top: 200px;
+}
+
+.showCard {
+  border: 2px solid lightgray;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+@media only screen and (max-width: 568px) {
+  .create input{
+    padding: 10px;
+  }
+  .createButton {
+    width: 170px;
+  }
+  .nav a {
+    font-size: 3em;
+  }
+  .nav {
+    height: 150px;
+  }
+  .links {
+    height: 150px;
+    width: 250px;
+    flex-direction: column;
+  }
+  .links button {
+    width: 100%;
+  }
+  .buttons {
+    width: 40%;
+    display: flex;
+  }
+  .bookmark h2 a {
+    font-size: .8em;
+  }
+  .showCard {
+    width: 250px;
+  }
+  .editForm {
+    flex-direction: column;
+    width: 80%;
+  }
+  .deleteButton {
+    margin-top: 50px;
+  }
 }
