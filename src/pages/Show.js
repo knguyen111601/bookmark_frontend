@@ -47,7 +47,7 @@ const Show = (props) => {
         
     const removeBookmark = (event) => {
         event.preventDefault()
-        props.deleteBookmark(bookmark._id)
+        props.deleteBookmark(id)
         navigate("/")
     }
 
